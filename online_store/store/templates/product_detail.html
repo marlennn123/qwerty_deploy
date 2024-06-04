@@ -1,0 +1,13 @@
+
+<p>Name: {{product.product_name}}</p>
+{% if product.category %}
+    <p>Category: {{product.category}}</p>
+{% else %}
+    <p>No Category</p>
+{% endif %}
+<p>Description: {{product.description}}</p>
+<p>Price: {{product.price}}</p>
+<p>Category: {{product.active}}</p>
+<p>Date: {{product.date}}</p>
+
+<button><a href="{% url 'product_update' product.pk %}">Update</a></button>
